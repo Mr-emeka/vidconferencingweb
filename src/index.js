@@ -1,15 +1,12 @@
-import React, { Suspense } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
-import Loader from "./component/custom/loader";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Suspense fallback={<Loader />}>
-      <App />
-    </Suspense>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
