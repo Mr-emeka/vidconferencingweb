@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Loader } from "../../../assets/icons/spinner.svg";
+import { ReactComponent as Loader } from "../../assets/svg/spinner.svg";
 
 const LoaderComp = () => {
   return (
