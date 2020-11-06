@@ -90,7 +90,7 @@ const Room = (props) => {
         });
       });
     return () => {};
-  }, []);
+  }, [roomId, userDetails]);
 
   const createPeer = (userToSignal, callerId, stream) => {
     const peer = new Peer({
