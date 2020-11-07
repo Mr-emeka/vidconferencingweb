@@ -15,7 +15,7 @@ const Room = (props) => {
   const [peers, setPeers] = useState([]);
   const socketRef = useRef();
   const refVideo = useRef();
-  const peersRef = useRef();
+  const peersRef = useRef([]);
 
   useEffect(() => {
     navigator.mediaDevices
