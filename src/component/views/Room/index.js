@@ -23,9 +23,7 @@ const Room = (props) => {
       .then((stream) => {
         refVideo.current.srcObject = stream;
 
-        socketRef.current = io.connect(process.env.REACT_APP_SOCKET_URL, {
-          transports: ["websocket", "polling"],
-        });
+        socketRef.current = io.connect(process.env.REACT_APP_SOCKET_URL);
 
         // sending the user details and roomid to join in the room
         socketRef.current.emit("join-room", roomId, userDetails);
