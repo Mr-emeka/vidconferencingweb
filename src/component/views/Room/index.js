@@ -24,8 +24,7 @@ const Room = (props) => {
         refVideo.current.srcObject = stream;
 
         socketRef.current = io.connect(
-          "https://still-sierra-42991.herokuapp.com",
-          { transports: ["websocket"] }
+          "https://still-sierra-42991.herokuapp.com"
         );
 
         // sending the user details and roomid to join in the room
