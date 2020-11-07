@@ -26,7 +26,7 @@ const Room = (props) => {
         socketRef.current = io.connect(
           "https://still-sierra-42991.herokuapp.com",
           {
-            transports: ["polling"],
+            transports: ["websocket"],
           }
         );
 
