@@ -25,7 +25,7 @@ const Room = (props) => {
 
         socketRef.current = io.connect(
           "https://still-sierra-42991.herokuapp.com",
-          { secure: true }
+          { transports: ["websocket"] }
         );
 
         // sending the user details and roomid to join in the room
