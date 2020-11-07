@@ -15,7 +15,7 @@ const Room = (props) => {
   const [peers, setPeers] = useState([]);
   const socketRef = useRef();
   const refVideo = useRef();
-  const peersRef = useRef([]);
+  const peersRef = useRef();
 
   useEffect(() => {
     navigator.mediaDevices
@@ -23,11 +23,9 @@ const Room = (props) => {
       .then((stream) => {
         refVideo.current.srcObject = stream;
 
-        socketRef.current = io.connect(
-          "https://still-sierra-42991.herokuapp.com"
-        );
-
-        // socketRef.current = io.connect("localhost:3030");
+        socketRef.current = io.connect(process.env.REACT_APP_SOCKET_URL, {
+          transports: ["websocket", "polling"],
+        });
 
         // sending the user details and roomid to join in the room
         socketRef.current.emit("join-room", roomId, userDetails);
