@@ -27,6 +27,8 @@ const Room = (props) => {
           "https://still-sierra-42991.herokuapp.com"
         );
 
+        // socketRef.current = io.connect("localhost:3030");
+
         // sending the user details and roomid to join in the room
         socketRef.current.emit("join-room", roomId, userDetails);
 
