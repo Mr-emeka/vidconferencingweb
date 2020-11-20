@@ -14,10 +14,13 @@ jobs:
         run: npm install
       - name: Run Tests
         env:
-        # Treating warnings as errors options: true and false
+          # Treating warnings as errors options: true and false
           CI: false
         run: npm test
       - name: Build
+        env:
+          # Treating warnings as errors options: true and false
+          CI: false
         run: npm run build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@v2
