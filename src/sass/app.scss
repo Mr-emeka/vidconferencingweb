@@ -1,0 +1,48 @@
+// The file that imports all other scss 
+//  Any SCSS file without an underscore at the beginning is compiled as a different stylesheet.
+@import './variables';
+@import './elements';
+@import './mixins';
+
+@import './components/main.scss';
+@import './pages/home.scss';
+
+:root {
+    --montserrat: 'Montserrat', sans-serif;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+body {
+    font-family: var(--montserrat);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
