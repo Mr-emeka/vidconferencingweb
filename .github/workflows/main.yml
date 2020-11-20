@@ -14,7 +14,8 @@ jobs:
         run: npm install
       - name: Run Tests
         env:
-          CI: true
+        # Treating warnings as errors options: true and false
+          CI: false
         run: npm test
       - name: Build
         run: npm run build
